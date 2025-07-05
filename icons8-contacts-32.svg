@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+	<title>icons8-contacts-32</title>
+	<defs>
+		<image  width="20" height="22" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAMAAAD3n0w0AAAAAXNSR0IB2cksfwAAAO1QTFRFAAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////bAyRTwAAAE90Uk5TABaDz/TOghVU8v/xUv6vPwtAsP1RdXfwFLKB0EHzDA0O781Cy3uzeux5T/xOVVzlWwObbCmZApr3YgFkl1n2OzxYCeRl4wira26p3ygq3ZfzEzIAAAEaSURBVHicVdBdSwJBFAbgeV0XJyrqIpI+NPuwqGjLEg2iEBEion/bRTchUigIgaxdZAmWaImaiyVkLMumc6bJ3osZ5pnD4cyAiWCQ4fJNJ7FyQN71FHLd8YrK/hjaEsEx3hKVs71JNAg93PtBrdlcd/qVcMHSuxIXO7ZNGHifqUpcarlfhP5PhaGmv0K40vBZElff5suE4TrvSFyvBUpypI3qRFPY5kuw5Mrht1CZ0jxM12rLuFfP3Hl2xK6FiuqZBp5kzzAKhBE8MNtAma25BR/bRn6I8aIBZEVhTHfM/dsBHt9FkWG/SfTNeBpJ5HZz7C+p7BGw92hH8iMYq1sHOL05uWKjOcskcJ5OXv7Di+sUDk31RZRgO/oD4JRQcGukkxAAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="6" y="4"/>
+</svg>

@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar Hub</title>
+     <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" href="./styles/base.css">
+     <link rel="shortcut icon" href="./images/favicons/icons8-guitar-isometric-line-16.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+<section id="hero">
+    
+		<header>
+			<div class="header-side-book" >
+				<a href="./index.html" >
+                    <img src="./images/frettone-logo.svg" alt="Logo" width="80" height="80" >
+                </a>
+			</div>
+            <div id="open-sidebar-button" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false" aria-controls="navbar">
+                 <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9"><path d="M165.13-254.62q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.86q7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.87q-7.22 7.12-17.9 7.12H165.13Zm0-200.25q-10.68 0-17.9-7.27-7.23-7.26-7.23-17.99 0-10.74 7.23-17.87 7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.27 7.23 7.26 7.23 17.99 0 10.74-7.23 17.87-7.22 7.13-17.9 7.13H165.13Zm0-200.26q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.87q7.22-7.12 17.9-7.12h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.86q-7.22 7.13-17.9 7.13H165.13Z"/></svg>
+            </div>
+            <nav id="navbar">
+                <ul class="nav-menu">
+                <li>
+                    <div id="close-sidebar-button" onclick="closeSidebar()" aria-label="close sidebar">
+                         <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9"><path d="m480-444.62-209.69 209.7q-7.23 7.23-17.5 7.42-10.27.19-17.89-7.42-7.61-7.62-7.61-17.7 0-10.07 7.61-17.69L444.62-480l-209.7-209.69q-7.23-7.23-7.42-17.5-.19-10.27 7.42-17.89 7.62-7.61 17.7-7.61 10.07 0 17.69 7.61L480-515.38l209.69-209.7q7.23-7.23 17.5-7.42 10.27-.19 17.89 7.42 7.61 7.62 7.61 17.7 0 10.07-7.61 17.69L515.38-480l209.7 209.69q7.23 7.23 7.42 17.5.19 10.27-7.42 17.89-7.62 7.61-17.7 7.61-10.07 0-17.69-7.61L480-444.62Z"/></svg>
+                    </div>
+                </li>
+				
+                        <li class="nav-item">
+                           <a href="#courses" class="nav-link nav-link-2">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#blog" class="nav-link nav-link-2">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#Contact" class="nav-link nav-link-2">Contact Us</a>
+                        </li>
+                  
+				</ul>
+			</nav>
+            <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+			<div class="header-side-book">
+				<a href="#" class="button">
+					Book a Call
+					<svg width="12" height="12" viewBox="0 0 12 12">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M7.28033 0.96967C6.98744 0.676777 6.51256 0.676777 6.21967 0.96967C5.92678 1.26256 5.92678 1.73744 6.21967 2.03033L9.43934 5.25H1.5C1.08579 5.25 0.75 5.58579 0.75 6C0.75 6.41421 1.08579 6.75 1.5 6.75H9.43934L6.21967 9.96967C5.92678 10.2626 5.92678 10.7374 6.21967 11.0303C6.51256 11.3232 6.98744 11.3232 7.28033 11.0303L11.7803 6.53033C12.0732 6.23744 12.0732 5.76256 11.7803 5.46967L7.28033 0.96967Z"/>
+					</svg>
+				</a>
+			</div>
+            
+		</header>
+       
+ 
+		<!-- INTRO CODE -->
+		<h1>
+            Beyond the Frets:
+            <span id="typewriter"></span>
+            <span id="cursor">&VerticalBar;</span>
+        </h1>
+		<!--INTRO CODE--> 		
+        <div class="online-groups">
+             <div class="hero-content">
+              <div id="courses-scroll">
+			<p>scroll</p>
+			
+			<svg width="12" height="12" viewBox="0 0 12 12">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M11.0303 6.53033C11.3232 6.23744 11.3232 5.76256 11.0303 5.46967C10.7374 5.17678 10.2626 5.17678 9.96967 5.46967L6.75 8.68934L6.75 0.75C6.75 0.335786 6.41421 -2.11379e-07 6 -2.29485e-07C5.58579 -2.47591e-07 5.25 0.335786 5.25 0.75L5.25 8.68934L2.03033 5.46967C1.73744 5.17678 1.26256 5.17678 0.96967 5.46967C0.676777 5.76256 0.676777 6.23744 0.96967 6.53033L5.46967 11.0303C5.76256 11.3232 6.23744 11.3232 6.53033 11.0303L11.0303 6.53033Z"/>
+			</svg>
+		</div>
+        </div>
+          <div class="hero-text-content">
+                <p class="hero-subheadline">Join thousands of students learning guitar through our expert-led courses and comprehensive resources</p>
+            <div class="hero-cta-buttons">
+                <div class="btn " >
+                   + Free Lessons 
+                </div>
+            </div>
+                <div>
+                    <div class="student-avatars">
+                        <img class="avatar" src="./images/avatar-3.jpg"alt="Student" loading="lazy">
+                        <img class="avatar" src="./images/avatar-4.jpg" alt="Student" loading="lazy">
+                        <img class="avatar" src="./images/avatar-6.jpg" alt="Student" loading="lazy">
+                        
+                 </div>
+                    <p class="students-count-text">Join <span class="font-medium text-white">1,000+</span> students already learning</p>
+                </div>
+            </div>
+            </div>
+	</section> 
+    
+     <main>
+     <!-- Featured Courses Section -->
+    <section class="courses-section" id="courses">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Featured Courses</h2>
+                    <p class="section-subtitle">Handpicked courses to kickstart your guitar journey</p>
+                </div>
+                <a href="#courses" class="view-all-link">
+                    View all courses
+                </a>
+            </div>
+            <div class="courses-grid">
+                    <div class="course-card-content">
+                            <div class="gallery">
+                                <div>
+                                    <figure>
+                                        <picture>
+                                            <source media="(max-width: 768px)" srcset="./images/guitar-img-tablet-01.jpg" />
+                                           <img src="./images/guitar-img-01.jpg" alt="guitar courses" loading="lazy" >
+                                        </picture>
+                                        <figcaption>
+                                            <main>
+                                             <p class="small">28 lessons</p>
+                                             <h3>Guitar <em>Songwriting & Composition</em></h3>
+                                                <p>Transform your guitar skills into original compositions and songs
+                                                </p>
+                                            </main>
+                                            <footer>
+                                                <div>
+                                                    <p class="small">From</p>
+                                                    <p class="price">&#8373; 250</p>
+                                                </div>
+                                            <a  href="contact.html" target="_blank" id="arrow-icon" title="Enroll Now" > 
+                                            <svg  width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="48" height="48" rx="24" fill="#fa6800"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 24C13.5 23.8011 13.579 23.6103 13.7197 23.4696C13.8603 23.329 14.0511 23.25 14.25 23.25H31.9395L27.219 18.531C27.0782 18.3901 26.9991 18.1991 26.9991 18C26.9991 17.8008 27.0782 17.6098 27.219 17.469C27.3598 17.3281 27.5508 17.249 27.75 17.249C27.9492 17.249 28.1402 17.3281 28.281 17.469L34.281 23.469C34.3508 23.5386 34.4063 23.6214 34.4441 23.7125C34.4819 23.8036 34.5013 23.9013 34.5013 24C34.5013 24.0986 34.4819 24.1963 34.4441 24.2874C34.4063 24.3785 34.3508 24.4613 34.281 24.531L28.281 30.531C28.1402 30.6718 27.9492 30.7509 27.75 30.7509C27.5508 30.7509 27.3598 30.6718 27.219 30.531C27.0782 30.3901 26.9991 30.1991 26.9991 30C26.9991 29.8008 27.0782 29.6098 27.219 29.469L31.9395 24.75H14.25C14.0511 24.75 13.8603 24.671 13.7197 24.5303C13.579 24.3896 13.5 24.1989 13.5 24Z" fill="white"/> 
+                                            </svg>
+                                             <span class="tooltip-text" >Enroll Now</span>
+                                             </a>
+                                            </footer>
+                        </figcaption>
+                    </figure>
+            </div>
+                <div>
+                    <figure>
+                        <img src="./images/guitar-image-07.jpg" alt="guitar-courses" loading="lazy">
+                        <figcaption>
+                            <main>
+                                <p class="small">1 lessons</p>
+                                <h3>Beginner to Intermediate Guitar <em>Mastery</em></h3>
+                                <p>Perfect for beginners looking to build a solid foundation in guitar playing.</p>
+                            </main>
+                            <footer>
+                                <div>
+                                    <p class="small">From</p>
+                                    <p class="price">&#8373; 100</p>
+                                </div>
+                                <a  href="contact.html" target="_blank" id="arrow-icon" title="Enroll Now" > 
+                                            <svg  width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="48" height="48" rx="24" fill="#fa6800"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 24C13.5 23.8011 13.579 23.6103 13.7197 23.4696C13.8603 23.329 14.0511 23.25 14.25 23.25H31.9395L27.219 18.531C27.0782 18.3901 26.9991 18.1991 26.9991 18C26.9991 17.8008 27.0782 17.6098 27.219 17.469C27.3598 17.3281 27.5508 17.249 27.75 17.249C27.9492 17.249 28.1402 17.3281 28.281 17.469L34.281 23.469C34.3508 23.5386 34.4063 23.6214 34.4441 23.7125C34.4819 23.8036 34.5013 23.9013 34.5013 24C34.5013 24.0986 34.4819 24.1963 34.4441 24.2874C34.4063 24.3785 34.3508 24.4613 34.281 24.531L28.281 30.531C28.1402 30.6718 27.9492 30.7509 27.75 30.7509C27.5508 30.7509 27.3598 30.6718 27.219 30.531C27.0782 30.3901 26.9991 30.1991 26.9991 30C26.9991 29.8008 27.0782 29.6098 27.219 29.469L31.9395 24.75H14.25C14.0511 24.75 13.8603 24.671 13.7197 24.5303C13.579 24.3896 13.5 24.1989 13.5 24Z" fill="white"/> 
+                                            </svg>
+                                             <span class="tooltip-text" >Enroll Now</span>
+                                             </a>
+                            </footer>
+                        </figcaption>
+                    </figure>
+                </div>
+				<div>
+                    <figure>
+                        <img src="./images/guitar-image-09.jpg" alt="guitar-courses" loading="lazy">
+                        <figcaption>
+                            <main>
+                                <p class="small">36 lessons</p>
+                                <h3>Electric Guitar <em>Techniques & Solos </em></h3>
+                                <p>Learn advanced techniques, improvisation, and iconic solos from famous songs.</p>
+                            </main>
+                            <footer>
+                                <div>
+                                    <p class="small">From</p>
+                                    <p class="price">&#8373; 300</p>
+                                </div>
+                                    <a  href="contact.html" target="_blank" id="arrow-icon" title="Enroll Now" > 
+                                            <svg  width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="48" height="48" rx="24" fill="#fa6800"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 24C13.5 23.8011 13.579 23.6103 13.7197 23.4696C13.8603 23.329 14.0511 23.25 14.25 23.25H31.9395L27.219 18.531C27.0782 18.3901 26.9991 18.1991 26.9991 18C26.9991 17.8008 27.0782 17.6098 27.219 17.469C27.3598 17.3281 27.5508 17.249 27.75 17.249C27.9492 17.249 28.1402 17.3281 28.281 17.469L34.281 23.469C34.3508 23.5386 34.4063 23.6214 34.4441 23.7125C34.4819 23.8036 34.5013 23.9013 34.5013 24C34.5013 24.0986 34.4819 24.1963 34.4441 24.2874C34.4063 24.3785 34.3508 24.4613 34.281 24.531L28.281 30.531C28.1402 30.6718 27.9492 30.7509 27.75 30.7509C27.5508 30.7509 27.3598 30.6718 27.219 30.531C27.0782 30.3901 26.9991 30.1991 26.9991 30C26.9991 29.8008 27.0782 29.6098 27.219 29.469L31.9395 24.75H14.25C14.0511 24.75 13.8603 24.671 13.7197 24.5303C13.579 24.3896 13.5 24.1989 13.5 24Z" fill="white"/> 
+                                            </svg>
+                                             <span class="tooltip-text" >Enroll Now</span>
+                                             </a>
+                            </footer>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                        <picture style="object-fit: none;">
+                            <source media="(max-width: 768px)" srcset="./images/guitar-mobile-img.jpg" />
+                            <img src="./images/guitar-adv-img.jpg" alt="guitar-courses" loading="lazy">
+                                        </picture>
+                        
+                        <figcaption>
+                            <main>
+                                <p class="small">11 lessons</p>
+                                <h3>Electric Guitar <em>Techniques & Solos</em> </h3>
+                                <p>Learn advanced techniques, improvisation, and iconic solos from famous songs.</p>
+                            </main>
+                            <footer>
+                                <div>
+                                    <p class="small">From</p>
+                                    <p class="price">&#8373; 300</p>
+                                 </div>
+                                  <a  href="contact.html" target="_blank" id="arrow-icon" title="Enroll Now" > 
+                                            <svg  width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="48" height="48" rx="24" fill="#fa6800"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 24C13.5 23.8011 13.579 23.6103 13.7197 23.4696C13.8603 23.329 14.0511 23.25 14.25 23.25H31.9395L27.219 18.531C27.0782 18.3901 26.9991 18.1991 26.9991 18C26.9991 17.8008 27.0782 17.6098 27.219 17.469C27.3598 17.3281 27.5508 17.249 27.75 17.249C27.9492 17.249 28.1402 17.3281 28.281 17.469L34.281 23.469C34.3508 23.5386 34.4063 23.6214 34.4441 23.7125C34.4819 23.8036 34.5013 23.9013 34.5013 24C34.5013 24.0986 34.4819 24.1963 34.4441 24.2874C34.4063 24.3785 34.3508 24.4613 34.281 24.531L28.281 30.531C28.1402 30.6718 27.9492 30.7509 27.75 30.7509C27.5508 30.7509 27.3598 30.6718 27.219 30.531C27.0782 30.3901 26.9991 30.1991 26.9991 30C26.9991 29.8008 27.0782 29.6098 27.219 29.469L31.9395 24.75H14.25C14.0511 24.75 13.8603 24.671 13.7197 24.5303C13.579 24.3896 13.5 24.1989 13.5 24Z" fill="white"/> 
+                                            </svg>
+                                             <span class="tooltip-text" >Enroll Now</span>
+                                             </a>
+                            </footer>
+                        </figcaption>
+                    </figure>
+                </div>
+			<div>
+                <figure>
+                    <img src="./images/guitar-image-06.jpg" alt="guitar-courses" loading="lazy">
+                        <figcaption>
+                            <main>
+                                <p class="small">13 lessons</p>
+                                <h3>Guitar <em>Songwriting & Composition</em>
+                                </h3>
+                                <p>Transform your guitar skills into original compositions and songs.</p>
+                            </main>
+                            <footer>
+                                <div>
+                                    <p class="small">From</p>
+                                    <p class="price">&#8373; 400</p>
+                                </div>
+                                   <a  href="contact.html" target="_blank" id="arrow-icon" title="Enroll Now" > 
+                                            <svg  width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="48" height="48" rx="24" fill="#fa6800"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 24C13.5 23.8011 13.579 23.6103 13.7197 23.4696C13.8603 23.329 14.0511 23.25 14.25 23.25H31.9395L27.219 18.531C27.0782 18.3901 26.9991 18.1991 26.9991 18C26.9991 17.8008 27.0782 17.6098 27.219 17.469C27.3598 17.3281 27.5508 17.249 27.75 17.249C27.9492 17.249 28.1402 17.3281 28.281 17.469L34.281 23.469C34.3508 23.5386 34.4063 23.6214 34.4441 23.7125C34.4819 23.8036 34.5013 23.9013 34.5013 24C34.5013 24.0986 34.4819 24.1963 34.4441 24.2874C34.4063 24.3785 34.3508 24.4613 34.281 24.531L28.281 30.531C28.1402 30.6718 27.9492 30.7509 27.75 30.7509C27.5508 30.7509 27.3598 30.6718 27.219 30.531C27.0782 30.3901 26.9991 30.1991 26.9991 30C26.9991 29.8008 27.0782 29.6098 27.219 29.469L31.9395 24.75H14.25C14.0511 24.75 13.8603 24.671 13.7197 24.5303C13.579 24.3896 13.5 24.1989 13.5 24Z" fill="white"/> 
+                                            </svg>
+                                             <span class="tooltip-text" >Enroll Now</span>
+                                             </a>
+                            </footer>
+                        </figcaption>
+                    </figure> 
+            </div>          
+				<div>
+                    <figure>
+                        <img src="./images/maintain-05.jpg" alt="guitar-courses" loading="lazy">
+                        <figcaption>
+                            <main>
+                                <p class="small">13 lessons</p>
+                                <h3>Guitar <em>Songwriting & Composition</em></h3>
+                                <p>Transform your guitar skills into original compositions and songs.</p>
+                        </main>
+                            <footer>
+                                <div>
+                                <p class="small">From</p>
+                                <p class="price"> &#8373; 200</p>
+                                </div>
+                                   <a  href="contact.html" target="_blank" id="arrow-icon" title="Enroll Now" > 
+                                            <svg  width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="48" height="48" rx="24" fill="#fa6800"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 24C13.5 23.8011 13.579 23.6103 13.7197 23.4696C13.8603 23.329 14.0511 23.25 14.25 23.25H31.9395L27.219 18.531C27.0782 18.3901 26.9991 18.1991 26.9991 18C26.9991 17.8008 27.0782 17.6098 27.219 17.469C27.3598 17.3281 27.5508 17.249 27.75 17.249C27.9492 17.249 28.1402 17.3281 28.281 17.469L34.281 23.469C34.3508 23.5386 34.4063 23.6214 34.4441 23.7125C34.4819 23.8036 34.5013 23.9013 34.5013 24C34.5013 24.0986 34.4819 24.1963 34.4441 24.2874C34.4063 24.3785 34.3508 24.4613 34.281 24.531L28.281 30.531C28.1402 30.6718 27.9492 30.7509 27.75 30.7509C27.5508 30.7509 27.3598 30.6718 27.219 30.531C27.0782 30.3901 26.9991 30.1991 26.9991 30C26.9991 29.8008 27.0782 29.6098 27.219 29.469L31.9395 24.75H14.25C14.0511 24.75 13.8603 24.671 13.7197 24.5303C13.579 24.3896 13.5 24.1989 13.5 24Z" fill="white"/> 
+                                            </svg>
+                                             <span class="tooltip-text" >Enroll Now</span>
+                                             </a>
+                            </footer>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>	
+        </div>	
+    </section>
+     <br>
+     <!-- Latest Blog Posts -->
+    <section class="blog-section" id="blog">
+        <div class="blog-container">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Latest from Our Blog</h2>
+                    <p class="section-subtitle">Tips, tutorials, and insights from our guitar experts</p>
+                </div>
+                <a href="#blog" class="view-all-link">
+                    View all articles
+                </a>
+            </div>
+            <div class="blog-grid">
+                <!-- Blog Post 1 -->
+                <div class="blog-post-card">
+                  
+                    <div class="blog-post-image-wrapper">
+                        <img class="blog-post-image" src="./images/maintain-03.jpg">
+                    </div>
+                    <div class="blog-post-content">
+                         <div class="stars">
+                                <img src="./images/star-s-fill.svg" height="24"  width="24" alt="stars icon">
+                                <img src="./images/star-s-fill.svg" height="24" width="24" alt="stars icon">
+                                <img src="./images/star-s-fill.svg" width="24" alt="stars icon" height="24">
+                                <img src="./images/star-s-fill.svg" width="24" alt="stars icon" height="24">
+                                <img src="./images/star-half-s-fill.svg" width="24" alt="stars icon" height="24">
+                                
+                            </div>
+                        <div class="blog-post-meta">
+                            <span>May 12, 2025</span>
+                            <span class="separator"> • </span>
+                            <span>Guitar Care</span>
+                        </div>
+                        <h3 class="blog-post-title">5 Essential Guitar Maintenance Tips Every Player Should Know</h3>
+                        <p class="blog-post-excerpt">Learn how to keep your instrument in top condition with these simple maintenance routines.</p>
+                        <div class="author-info">
+                            <img class="author-avatar" src="./images/chris.jpg" alt="Michael Richardson">
+                            <div>
+                                <p class="author-name">Michael Richardson</p>
+                                <p class="author-title">Guitar Technician</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog Post 2 -->
+                 <div class="blog-post-card">
+                    <div class="blog-post-image-wrapper">
+                        <img class="blog-post-image" src="./images/maintain-04.jpg" alt="Practice Techniques">
+                    </div>
+                    <div class="blog-post-content">
+                             <div class="stars">
+                                 <img src="./images/star-s-fill.svg" width="24" alt="stars icon" height="24">
+                                    <img src="./images/star-s-fill.svg" width="24" alt="stars icon" height="24">
+                                    <img src="./images/star-s-fill.svg" width="24" alt="stars icon" height="24">
+                                    <img src="./images/star-s-fill.svg" width="24" alt="stars icon" height="24">
+                                    <img src="./images/star-s-fill.svg" width="24" alt="stars icon" height="24">
+                             </div>
+                        <div class="blog-post-meta">
+                            <span>May 8, 2025</span>
+                            <span class="separator"> • </span>
+                            <span>Learning Tips</span>
+                        </div>
+                        <h3 class="blog-post-title">The 20-Minute Practice Routine That Will Transform Your Playing</h3>
+                        <p class="blog-post-excerpt">Maximize your practice time with this efficient routine designed for busy guitarists.</p>
+                        <div class="author-info">
+                            <img class="author-avatar" src="./images/avatar-5.jpg" alt=" Johnson">
+                            <div>
+                                <p class="author-name">Mark Johnson</p>
+                                <p class="author-title">Performance Coach</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog Post 3 -->
+                 <div class="blog-post-card">
+                    <div class="blog-post-image-wrapper">
+                        <img class="blog-post-image" src="./images/guitar-img-05.jpg" alt="Guitar Types">
+                    </div>
+                    <div class="blog-post-content">
+                         <div class="stars">
+                                 <img src="./images/star-s-fill.svg" width="24" alt="stars icon" height="24">
+                                    <img src="./images/star-s-fill.svg" width="24" alt="stars icon" height="24">
+                                    <img src="./images/star-s-fill.svg" width="24" alt="stars icon" height="24">
+                                    <img src="./images/star-s-fill.svg" width="24" alt="stars icon" height="24">
+                             </div>
+                        <div class="blog-post-meta">
+                            <span>May 3, 2025</span>
+                            <span class="separator">•</span>
+                            <span>Gear Guide</span>
+                        </div>
+                        <h3 class="blog-post-title">Choosing Your First Guitar: A Comprehensive Guide for Beginners</h3>
+                        <p class="blog-post-excerpt">Navigate the overwhelming options with our expert advice on finding the perfect starter guitar.</p>
+                        <div class="author-info">
+                            <img class="author-avatar" src="./images/avatar-6.jpg" alt="Daniel Martinez">
+                            <div>
+
+                                <p class="author-name">Daniel Martinez</p>
+                                <p class="author-title">Instrument Specialist</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+ 
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us-section">
+        <div class="container">
+            <div class="section-header-centered">
+                <h2 class="section-title">Why Learn with Guitar</h2>
+                <p class="section-subtitle-large">Our platform combines expert instruction with innovative learning tools to help you master the guitar faster.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper">
+                         <img src="./images/contacts-line.svg" alt="expert icon" width="24px">
+                    </div>
+                    <h3 class="feature-title">Expert Instructors</h3>
+                    <p class="feature-description">Learn from professional guitarists with years of teaching experience.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper">
+                         <!-- icons here -->
+                          <img src="./images/play-circle-line.svg" alt="">
+                    </div>
+                    <h3 class="feature-title">HD Video Lessons</h3>
+                    <p class="feature-description">Crystal clear videos with multiple camera angles to see every detail.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper">
+                        <!-- icons here -->
+                         <img src="./images/icons8-music.svg" width="24" height="24" alt="Interactive labs icons">
+                    </div>
+                    <h3 class="feature-title">Interactive Tabs</h3>
+                    <p class="feature-description">Follow along with synchronized tablature that highlights as you play.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper">
+                        <!-- icons here -->
+                         <img src="./images/group-3-fill.svg" alt="community icon" width="24" height="24">
+                    </div>
+                    <h3 class="feature-title">Community Support</h3>
+                    <p class="feature-description">Connect with fellow guitarists and get feedback on your progress.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header-centered">
+                <h2 class="section-title">What Our Students Say</h2>
+                <p class="section-subtitle-large">Hear from guitarists who have transformed their playing with our courses</p>
+            </div>
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-quote-icon">"</div>
+                    <p class="testimonial-text">Guitar completely changed my approach to learning. The step-by-step lessons made complex techniques accessible, and I'm now confidently playing songs I never thought I could master.</p>
+                    <div class="testimonial-author">
+                        <img class="author-avatar" src="./images/avatar-02.jpg" alt="James Wilson">
+                        <div>
+                            <p class="author-name">James Wilson</p>
+                            <p class="author-title-small">Beginner Course Graduate</p>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-quote-icon">"</div>
+                    <p class="testimonial-text">As someone who tried and failed to learn guitar multiple times, Guitar's structured approach finally made it click. The community support and instructor feedback have been invaluable.</p>
+                    <div class="testimonial-author">
+                        <img class="author-avatar" src="./images/avatar-03.jpg" alt="Emma-Thompson">
+                        <div>
+                            <p class="author-name">Emma Thompson</p>
+                            <p class="author-title-small">Intermediate Course Student</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-quote-icon">"</div>
+                    <p class="testimonial-text">The songwriting course opened up a whole new world for me. I've gone from playing covers to writing my own music, and I've even performed my original songs at local venues.</p>
+                    <div class="testimonial-author">
+                        <img class="author-avatar" src="./images/avatar-1.jpg" alt="Mak Adee">
+                        <div>
+                            <p class="author-name">Mak Adee</p>
+                            <p class="author-title-small">Songwriting Course Graduate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="newsletter-bg-image">
+            <!-- image here before && after noted -->
+        </div>
+            <div class="newsletter-content">
+                <h2 class="section-title">Get Weekly Guitar Tips & Updates</h2>
+                <p class="section-subtitle-large">Join our newsletter for exclusive lessons, practice tips, and special offers delivered straight to your inbox.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" class="newsletter-input">
+                    <button type="submit"  class="btn-sub" id="btn-submit">
+					<span class="button-text">Subscribe Now</span>
+
+					<!-- loading dots -->
+					<div class="button-loader">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+					<!-- loading dots-->
+				</button>
+                </form>
+                <p class="newsletter-privacy">We respect your privacy. Unsubscribe at any time.</p>
+            </div>
+            
+    </section>
+
+</main>
+
+    <!-- Footer -->
+    <footer class="footer" id="Contact">
+       
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="logo-text footer-logo"><img src="./images/frettone-logo.svg" width="80"
+                        height="80" alt="logo"></a>
+                    <p class="footer-description">Empowering guitarists worldwide with expert instruction, comprehensive resources, and a supportive community.</p>
+                    <div class="social-links">
+                        
+                        <a href="#" class="social-link">
+                            <img src="./images/icons8-facebook-50.svg" alt="facebook">
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="./images/IG-img.svg" alt="IG">
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="./images/twitter-img.svg" alt="twitter">
+                        </a>
+                    </div>
+                </div>
+     
+                <div class="footer-links-group">
+                    <h3 class="footer-heading">Resources</h3>
+                    <ul class="footer-list">
+                        <li><a href="#" class="footer-link">Free Lessons</a></li>
+                        <li><a href="#https://www.scales-chords.com/scalefinder.php" target="_blank" class="footer-link">Chord Library</a></li>
+                        <li><a href="#https://www.justinguitar.com/chords" target="_blank" class="footer-link">Scale Finder</a></li>
+                        <li><a href="#https://www.google.com/search?q=metronome&rlz=1C1GCEU_enGH1162GH1162&oq=metro&gs_lcrp=EgZjaHJvbWUqDAgAEAAYQxiABBiKBTIMCAAQABhDGIAEGIoFMg8IARBFGDkYgwEYsQMYgAQyBwgCEC4YgAQyCggDEAAYsQMYgAQyDQgEEC4YxwEY0QMYgAQyDQgFEAAYgwEYsQMYgAQyDQgGEC4YrwEYxwEYgAQyCggHEAAYsQMYgAQyEwgIEC4YgwEYxwEYsQMY0QMYgAQyBwgJEAAYgATSAQg1Mzc4ajBqNKgCALACAA&sourceid=chrome&ie=UTF-8" target="_blank" class="footer-link">Metronome</a></li>
+                        <li><a href="#www.musicca.com/tuner" target="_blank" class="footer-link">Tuner</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact-group">
+                    <h3 class="footer-heading">Contact Us</h3>
+                    <ul class="footer-list footer-contact-list">
+                        <li class="contact-item">                          
+                            <a href="#" class="footer-link">
+                             <img  src="./images/icons8-address-80-white.svg"  alt="location icon" width="30px" height="30px"
+                             loading="lazy" style="vertical-align: bottom;">   Ayeben street, Adenta, Ghana</a>
+                        </li>
+                        <li class="contact-item">
+                            <a href="mailto:info@webguitar.com" class="footer-link">
+                             <img src="./images/icons8-email-100-white.svg" alt="email-icon" width="30px" loading="lazy" style="margin-bottom: 5px;">   learn@frettone.com</a>
+                        </li>
+                        <li class="contact-item">
+                            <a href="tel:+1-615-555-0123" class="footer-link">
+                               <img src="./images/icons8-contacts-32.svg" alt="contact-me" width="20px" 
+                               loading="lazy" style="margin-bottom: 5px;"> +233 (533) 064-0330</a>
+                        </li>
+                        <li class="contact-item">
+                           <a href="#" class="button">Book a Call</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright-text">&COPY;2025 <em style="font-style: italic;"><span style="color: rgb(235, 91, 39);">Fret</span>Tone</em>. All rights reserved.</p>
+                <div class="footer-legal-links">
+                    <a href="#" class="footer-link-small">Privacy Policy</a>
+                    <a href="#" class="footer-link-small">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+ 
+<!-- 
+this are for portfolio projects
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script> -->
+<script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script> 
+<script src="./index.js"></script>
+<script>
+    // Initialize Lenis
+const lenis = new Lenis({
+  autoRaf: true,
+});
+
+// Listen for the scroll event and log the event data
+lenis.on('scroll', (e) => {
+  console.log(e);
+});
+</script>
+<!-- <script>
+ // use a script tag or an external JS file
+ document.addEventListener("DOMContentLoaded", (event) => {
+  gsap.registerPlugin(ScrollTrigger)
+  // gsap code here!
+ }); 
+
+</script>-->
+ 
+</script>
+</body>
+</html>

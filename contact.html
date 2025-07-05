@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Helping individuals around the  world with passionate about playing guitar or being a professional guitarists. Located in The Ghana. Delivering high quality online tutorials through our interactive websites from scratch. "/>
+	<meta property="og:title" content="Guitar Hub"/>
+    <meta name="google" content="notranslate"/>
+    <link rel="shortcut icon" href="./images/favicons/icons8-guitar-isometric-line-16.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Book Courses | Let's Start a Project</title>
+
+    <style>
+      /* --- CSS Reset & Global Styles --- */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        /* outline: 2px solid red; */
+      }
+      :root{
+        --clr-coffee-deep-light: hsl(25, 100%, 49%);
+        --box-shadow:  -168px 560px 164px 0px rgba(0, 0, 0, 0.01), -107px 358px 150px 0px rgba(0, 0, 0, 0.08), -60px 202px 126px 0px rgba(0, 0, 0, 0.27), -27px 90px 94px 0px rgba(0, 0, 0, 0.45), -7px 22px 51px 0px rgba(0, 0, 0, 0.52); 
+		    --clr-error: #ef4444;
+        --clr-text: #f5f5f5;
+      }
+
+      body {
+        background:#000000;
+        color: hwb(0 96% 4%);
+        font-family: "Inter", sans-serif;
+        line-height: 1.6;
+        min-height: 100vh;
+      }
+
+      /* --- Main Layout --- */
+      .main-container {
+        display: grid;
+        gap: 2rem;
+        max-width: 80%;
+        min-height: 100vh;
+      }
+
+      .form-column {
+        max-width: 100%;
+        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+
+      .info-column {
+        width: 100%;
+        padding: 4rem;
+      }
+
+      /* --- Form Column Styles --- */
+      .form-header {
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 2rem; 
+      }
+
+   
+       span{
+        color: var(--clr-coffee-deep-light);
+        margin-bottom: 3rem;
+      }
+
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem; 
+      }
+
+      .form-step {
+        font-size: 0.875rem; 
+        color: rgba(255, 255, 255, 0.4);
+        margin-bottom: 0.5rem;
+      }
+
+      .form-label {
+        display: block;
+        margin-bottom: 0.5rem; 
+        color: var(--clr-text);
+      }
+      
+      .form-input,
+      .form-textarea {
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        color: var(--clr-text);
+        font-size: 1.125rem; 
+        padding-bottom: 0.5rem; 
+        font-family: inherit;
+      }
+
+      .form-input:focus,
+      .form-textarea:focus {
+        outline: none;
+        border-bottom-color: rgba(255, 255, 255, 0.5);
+      }
+
+      .form-input::placeholder,
+      .form-textarea::placeholder {
+        color: rgba(255, 255, 255, 0.4);
+      }
+      
+      .form-textarea {
+        resize: none;
+      }
+
+      .input-wrapper {
+        position: relative;
+      }
+      
+      .input-with-icon {
+        padding-right: 2rem; 
+      }
+
+      .input-icon {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.4);
+      }
+
+      .submit-container {
+        margin-top: 1rem;
+      }
+      
+      .submit-button {
+        background-color: var(--clr-coffee-deep-light);
+        color: var(--clr-text);
+        padding: 1rem 2rem; 
+        border: none;
+        border-radius: 8px;
+        display: inline-flex;
+        align-items: center;
+        white-space: nowrap;
+        font-size: 1rem; 
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+      }
+
+      .submit-button:hover {
+        background-color: var(--clr-coffee-deep-light);
+      }
+
+      .submit-button  {
+        margin-left: 0.5rem; 
+      }
+
+      /* --- Info Column Styles --- */
+      .profile-image-container {
+        margin-bottom: 4rem; 
+      }
+
+     
+
+      .info-block {
+        margin-bottom: 2.5rem;
+      }
+
+      .info-title {
+        font-size: 0.875rem; 
+        color: rgba(255, 255, 255, 0.4);
+        margin-bottom: 0.5rem; 
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      
+      .info-block p {
+        margin-bottom: 0.25rem; 
+        color: var(--clr-text);
+      }
+      
+      .social-links {
+        display: flex;
+        gap: 1rem; 
+      }
+
+      .social-links a {
+        color: var(--clr-text);
+        text-decoration: none;
+        transition: color 0.2s ease-in-out;
+      }
+
+      .social-links a:hover {
+        color: var(--clr-coffee-deep-light);
+      }
+
+      /* --- Form Validation Style --- */
+      .form-input.error,
+      .form-textarea.error {
+        border-bottom-color: var(--clr-error);
+      }
+
+      footer{
+        border-top: 1px solid var(--clr-coffee-deep-light);
+        padding: 2rem;
+      }
+      .footer-bottom {
+			border-top: var(--border-top);
+			padding-top: 2rem;
+			display: flex;
+			flex-direction: column; 
+			justify-content: space-between;
+			align-items: center;
+		}
+		@media (min-width: 768px) {
+			.footer-bottom {
+				flex-direction: row; 
+			}
+		}
+
+
+		.copyright-text {
+			font-size: 0.875rem; 
+			margin-bottom: 1rem; 
+		}
+
+		@media (min-width: 768px) {
+			.contact-item:last-child{
+				display: none;
+			}
+			.copyright-text {
+				margin-bottom: 0;
+			}
+		}
+
+
+		.footer-legal-links {
+			display: flex;
+		}
+		.footer-legal-links > .footer-link-small { /* space-x-6 */
+			margin-left: 1.5rem;
+		}
+		.footer-legal-links > .footer-link-small:first-child {
+			margin-left: 0;
+		}
+
+
+		.footer-link-small {
+			text-decoration: underline!important;
+			text-decoration-line: underline;
+			text-underline-offset: 5px;
+			color: var(--clr-coffee-deep-light);
+			text-decoration: none;
+			font-size: 0.875rem; 
+			transition: color 0.2s;
+		}
+		
+		.footer-link-small:hover {
+			color: rgb(139, 91, 3);
+		}
+		
+		.font-medium {
+			font-weight: 500; 
+		}
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <!-- Left side - Form -->
+      <div class="form-column">
+        <h1 class="form-header">
+          Start Your <br />Guitar Journey<br />with Us
+        </h1>
+        <span>Join a lesson, ask a question, or order your first guitar.</span>
+        <form class="contact-form" novalidate>
+          <div class="form-group">
+            <div class="form-step">(01)</div>
+            <label for="name" class="form-label">What's your name?</label>
+            <input
+              id="name"
+              type="text"
+              placeholder="Mark Adee"
+              class="form-input"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <div class="form-step">(02)</div>
+            <label for="email" class="form-label">What's your email?</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="Mark@gmail.com"
+              class="form-input"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <div class="form-step">(03)</div>
+            <label for="lessons" class="form-label"
+              >What are you looking for?</label
+            >
+            <input
+              id="lessons"
+              type="text"
+              placeholder="JGuitar Lessons, Buy a Guitar, Consultation"
+              class="form-input"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <div class="form-step">(04)</div>
+            <label for="services" class="form-label">	Preferred time or package?</label>
+            <div class="input-wrapper">
+              <input
+                id="services"
+                type="text"
+                placeholder="Weekends, 1-on-1 Sessions, Acoustic Guitar Package..."
+                class="form-input input-with-icon"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-step">(05)</div>
+            <label for="message" class="form-label">Your message</label>
+            <textarea
+              id="message"
+              placeholder="I want to learn blues guitar. Can you help me?..."
+              rows="3"
+              class="form-textarea"
+              required
+            ></textarea>
+          </div>
+          <div class="submit-container">
+            <button type="submit" class="submit-button">
+              Book Now
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Right side - Contact info -->
+      <div class="info-column">
+        <div class="profile-image-container">
+          <img
+            src="./images/frettone-logo.svg"
+            width="80" height="80"
+            alt="A friendly creative director"
+            class="profile-image" 
+          />
+        </div>
+        <div>
+          <div class="info-block">
+            <h3 class="info-title">Contact </h3>
+            <p>learn@frettone.com</p>
+            <p>+233 (5330) 64 330</p>
+          </div>
+          <div class="info-block">
+            <h3 class="info-title">FretTone Online</h3>
+            <p>Guitar Tutoring & Sales – Ghana-based, Worldwide Access</p>
+    
+          </div>
+          <div class="info-block">
+            <h3 class="info-title">Follow us:</h3>
+            <div class="social-links">
+              <a href="#">Facebook</a>
+              <a href="#">Instagram</a>
+              <a href="#">Twitter</a>
+              <a href="#">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+       <div class="footer-bottom">
+                <p class="copyright-text">&COPY;2025 <em style="font-style: italic;"><span style="color: rgb(235, 91, 39);">Fret</span>Tone</em>. All rights reserved.</p>
+                <div class="footer-legal-links">
+                    <a href="#" class="footer-link-small">Privacy Policy</a>
+                    <a href="#" class="footer-link-small">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Form Validation Script -->
+     <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script> 
+
+
+    <script>
+       // Initialize Lenis
+const lenis = new Lenis({
+  autoRaf: true,
+});
+
+// Listen for the scroll event and log the event data
+lenis.on('scroll', (e) => {
+  console.log(e);
+});
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector(".contact-form");
+        const inputs = form.querySelectorAll("input[required], textarea[required]");
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          let isValid = true;
+          
+          inputs.forEach((input) => {
+            if (!input.value.trim()) {
+              isValid = false;
+              input.classList.add("error");
+            } else {
+              input.classList.remove("error");
+            }
+          });
+
+          if (isValid) {
+            alert("Thank you for your message! We will get back to you soon.");
+            form.reset();
+            inputs.forEach(input => input.classList.remove("error"));
+          } else {
+            alert("Please fill in all required fields.");
+          }
+        });
+
+        // Remove the error style when the user starts typing
+        inputs.forEach((input) => {
+          input.addEventListener("input", function () {
+            if (this.value.trim()) {
+                this.classList.remove("error");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
